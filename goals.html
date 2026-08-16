@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>هدف‌ها | LifeOS</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/dashboard.css" />
+
+    <link rel="stylesheet" href="./css/goals.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">Life<span>OS</span></div>
+
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html" class="nav-item">
+            <span>⌂</span>
+            داشبورد
+          </a>
+
+          <a href="./goals.html" class="nav-item active">
+            <span>✓</span>
+            هدف‌ها
+          </a>
+
+          <a href="./habits.html" class="nav-item">
+            <span>↻</span>
+            عادت‌ها
+          </a>
+
+          <a href="./today.html" class="nav-item">
+            <span>◷</span>
+            امروز
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button id="logoutButton" class="logout-btn">خروج از حساب</button>
+        </div>
+      </aside>
+
+      <!-- Main -->
+
+      <main class="dashboard-main">
+        <!-- Header -->
+
+        <header class="dashboard-header">
+          <div>
+            <span class="dashboard-date"> هدف‌های من </span>
+
+            <h1>اهداف</h1>
+          </div>
+
+          <div class="user-avatar" id="userAvatar">-</div>
+        </header>
+
+        <!-- Goals Content -->
+
+        <section class="goals-content">
+          <!-- Page Header -->
+
+          <div class="goals-page-header">
+            <div>
+              <span class="section-label"> اهداف </span>
+
+              <h2>هدف‌های من</h2>
+
+              <p>مسیرت رو مشخص کن و قدم‌به‌قدم جلو برو.</p>
+            </div>
+
+            <button id="openGoalModal" class="add-goal-btn">+ هدف جدید</button>
+          </div>
+
+          <!-- Goals List -->
+
+          <div id="goalsList" class="goals-list">
+            <div class="empty-goals">
+              <div class="empty-goals-icon">🎯</div>
+
+              <h3>هنوز هدفی نداری</h3>
+
+              <p>اولین هدفت رو بساز و مسیرت رو شروع کن.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Goal Modal -->
+
+    <div id="goalModal" class="goal-modal hidden">
+      <div class="goal-modal-overlay" id="goalModalOverlay"></div>
+
+      <div class="goal-modal-content">
+        <div class="goal-modal-header">
+          <div>
+            <span class="modal-label"> هدف جدید </span>
+
+            <h2>یک هدف جدید بساز</h2>
+          </div>
+
+          <button type="button" id="closeGoalModal" class="close-modal">
+            ×
+          </button>
+        </div>
+
+        <!-- Form -->
+
+        <form id="goalForm">
+          <div class="form-group">
+            <label for="goalTitle"> عنوان هدف </label>
+
+            <input
+              id="goalTitle"
+              type="text"
+              placeholder="مثلاً: یادگیری NestJS"
+              maxlength="255"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="goalDescription"> توضیحات </label>
+
+            <textarea
+              id="goalDescription"
+              placeholder="توضیح کوتاهی درباره هدفت..."
+              rows="4"
+              maxlength="1000"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goalProgress"> میزان پیشرفت </label>
+
+            <div class="progress-input">
+              <input
+                id="goalProgress"
+                type="number"
+                min="0"
+                max="100"
+                value="0"
+              />
+
+              <span> ٪ </span>
+            </div>
+          </div>
+
+          <div class="goal-modal-actions">
+            <button type="button" id="cancelGoal" class="cancel-btn">
+              انصراف
+            </button>
+
+            <button type="submit" class="save-goal-btn">ساخت هدف</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="./js/api.js"></script>
+
+    <script src="./js/goals.js"></script>
+  </body>
+</html>

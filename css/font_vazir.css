@@ -1,0 +1,8 @@
+@font-face{
+
+font-family: vazir;
+src: url("..//font/Vazir-Light.woff2") format(woff2) ;
+src: url("..//font/vazir/Vazir.woff")  format(woff) ;
+/* src: url("..//font/vazir/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.woff2") format(woff2) ; */
+}
+

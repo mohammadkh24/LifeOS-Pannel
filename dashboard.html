@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>داشبورد | LifeOS</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">Life<span>OS</span></div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active">
+            <span>⌂</span>
+            داشبورد
+          </a>
+
+          <a href="./goals.html" class="nav-item">
+            <span>✓</span>
+            هدف‌ها
+          </a>
+
+          <a href="./habits.html" class="nav-item">
+            <span>↻</span>
+            عادت‌ها
+          </a>
+
+          <a href="./today.html" class="nav-item">
+            <span>◷</span>
+            امروز
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button id="logoutButton" class="logout-btn">خروج از حساب</button>
+        </div>
+      </aside>
+
+      <!-- Main -->
+
+      <main class="dashboard-main">
+        <!-- Header -->
+
+        <header class="dashboard-header">
+          <div>
+            <span class="dashboard-date" id="currentDate"> امروز </span>
+
+            <h1 id="welcomeMessage">سلام 👋</h1>
+          </div>
+
+          <div class="user-avatar" id="userAvatar">-</div>
+        </header>
+
+        <!-- Content -->
+
+        <section class="dashboard-content">
+          <!-- Welcome Card -->
+
+          <!-- Welcome Card -->
+
+          <div class="welcome-card">
+            <div class="welcome-card-content">
+              <div class="welcome-card-header">
+                <div>
+                  <span class="welcome-label"> وضعیت امروز </span>
+
+                  <h2 id="dailyTitle">امروزت رو شروع کن ✨</h2>
+
+                  <p id="dailyDescription">
+                    کارهایی که برات مهم هستن رو امروز مدیریت کن.
+                  </p>
+                </div>
+
+                <div class="today-progress-percent">
+                  <strong id="todayProgressPercent">0%</strong>
+                </div>
+              </div>
+
+              <div class="today-progress">
+                <div
+                  class="today-progress-fill"
+                  id="todayProgressFill"
+                  style="width: 0%"
+                ></div>
+              </div>
+
+              <div class="today-progress-footer">
+                <span id="todayProgressText">
+                  هنوز چیزی برای امروز انجام نشده
+                </span>
+
+                <span id="todayProgressStatus"> شروع کن 🚀 </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+
+          <div class="stats-grid">
+            <!-- Goals -->
+
+            <div class="stat-card">
+              <span class="stat-label"> هدف‌ها </span>
+
+              <strong id="goalCount"> 0 </strong>
+
+              <span class="stat-description" id="goalDescription">
+                هنوز هدفی اضافه نکردی
+              </span>
+            </div>
+
+            <!-- Habits -->
+
+            <!-- Habits -->
+
+            <div class="stat-card">
+              <span class="stat-label"> عادت‌ها </span>
+
+              <strong id="habitCount"> 0 </strong>
+
+              <span class="stat-description" id="habitDescription">
+                هنوز عادت فعالی نداری
+              </span>
+            </div>
+
+            <!-- Tasks -->
+
+            <div class="stat-card">
+              <span class="stat-label"> کارهای امروز </span>
+
+              <strong id="taskCount"> 0 </strong>
+
+              <span class="stat-description"> کار باقی‌مانده </span>
+            </div>
+          </div>
+
+          <!-- Tasks Section -->
+
+          <!-- Tasks Section -->
+
+          <div class="tasks-section">
+            <div class="section-header">
+              <div>
+                <h2>کارهای امروز</h2>
+              </div>
+            </div>
+
+            <form id="taskForm" class="task-form">
+              <input
+                id="taskInput"
+                type="text"
+                placeholder="مثلاً: ۳۰ دقیقه مطالعه"
+                maxlength="255"
+                autocomplete="off"
+                required
+              />
+
+              <button type="submit">اضافه کردن</button>
+            </form>
+
+            <div id="taskList" class="task-list">
+              <div class="empty-tasks">هنوز کاری برای امروز نداری.</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="./js/api.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

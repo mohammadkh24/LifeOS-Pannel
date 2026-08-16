@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>عادت‌ها | LifeOS</title>
+
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./css/habits.css"
+    />
+  </head>
+
+  <body>
+
+    <div class="habits-layout">
+
+      <!-- =========================
+           Sidebar
+      ========================== -->
+
+      <aside class="sidebar">
+
+        <div class="sidebar-logo">
+          Life<span>OS</span>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+          <a
+            href="./dashboard.html"
+            class="nav-item"
+          >
+            <span>⌂</span>
+            داشبورد
+          </a>
+
+
+          <a
+            href="./goals.html"
+            class="nav-item"
+          >
+            <span>✓</span>
+            هدف‌ها
+          </a>
+
+
+          <a
+            href="./habits.html"
+            class="nav-item active"
+          >
+            <span>↻</span>
+            عادت‌ها
+          </a>
+
+
+          <a
+            href="./today.html"
+            class="nav-item"
+          >
+            <span>◷</span>
+            امروز
+          </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+          <button
+            id="logoutButton"
+            class="logout-btn"
+            type="button"
+          >
+            خروج از حساب
+          </button>
+
+        </div>
+
+      </aside>
+
+
+      <!-- =========================
+           Main
+      ========================== -->
+
+      <main class="habits-main">
+
+
+        <!-- =========================
+             Header
+        ========================== -->
+
+        <header class="habits-header">
+
+          <div class="habits-header-content">
+
+            <h1>
+              عادت‌ها
+            </h1>
+
+            <p>
+              عادت‌هایی که می‌خواهی در زندگی روزمره‌ات بسازی.
+            </p>
+
+          </div>
+
+
+          <div
+            class="user-avatar"
+            id="userAvatar"
+          >
+            -
+          </div>
+
+        </header>
+
+
+        <!-- =========================
+             Add Habit
+        ========================== -->
+
+        <section class="habit-form-section">
+
+          <form
+            id="habitForm"
+            class="habit-form"
+          >
+
+            <input
+              id="habitInput"
+              type="text"
+              placeholder="مثلاً: هر روز ۳۰ دقیقه مطالعه"
+              maxlength="255"
+              autocomplete="off"
+              required
+            />
+
+
+            <button
+              type="submit"
+            >
+              اضافه کردن
+            </button>
+
+          </form>
+
+        </section>
+
+
+        <!-- =========================
+             Habits
+        ========================== -->
+
+        <section class="habits-section">
+
+
+          <div class="habits-section-header">
+
+            <h2>
+              عادت‌های من
+            </h2>
+
+
+            <span
+              class="habits-count"
+              id="habitCount"
+            >
+              0 فعال
+            </span>
+
+          </div>
+
+
+          <!-- Habit List -->
+
+          <div
+            id="habitList"
+            class="habit-list"
+          >
+
+            <div class="empty-habits">
+              هنوز عادتی اضافه نکردی.
+            </div>
+
+          </div>
+
+        </section>
+
+
+      </main>
+
+    </div>
+
+
+    <!-- =========================
+         Scripts
+    ========================== -->
+
+    <script src="./js/api.js"></script>
+
+    <script src="./js/habits.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>امروز | LifeOS</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/today.css" />
+  </head>
+
+  <body>
+    <div class="today-layout">
+
+      <!-- =========================
+           Sidebar
+      ========================== -->
+
+      <aside class="sidebar">
+
+        <div class="sidebar-logo">
+          Life<span>OS</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+          <a href="./dashboard.html" class="nav-item">
+            <span>⌂</span>
+            داشبورد
+          </a>
+
+          <a href="./goals.html" class="nav-item">
+            <span>✓</span>
+            هدف‌ها
+          </a>
+
+          <a href="./habits.html" class="nav-item">
+            <span>↻</span>
+            عادت‌ها
+          </a>
+
+          <a href="./today.html" class="nav-item active">
+            <span>◷</span>
+            امروز
+          </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button
+            id="logoutButton"
+            class="logout-btn"
+          >
+            خروج از حساب
+          </button>
+        </div>
+
+      </aside>
+
+
+      <!-- =========================
+           Main
+      ========================== -->
+
+      <main class="today-main">
+
+        <!-- Header -->
+
+        <header class="today-header">
+
+          <div>
+
+            <span class="today-label">
+              امروز
+            </span>
+
+            <h1 id="todayTitle">
+              امروزت
+            </h1>
+
+            <p id="todayDate">
+              در حال دریافت تاریخ...
+            </p>
+
+          </div>
+
+          <div
+            class="user-avatar"
+            id="userAvatar"
+          >
+            -
+          </div>
+
+        </header>
+
+
+        <!-- =========================
+             Content
+        ========================== -->
+
+        <section class="today-content">
+
+
+          <!-- =========================
+               Tasks
+          ========================== -->
+
+          <section class="today-card">
+
+            <div class="today-card-header">
+
+              <div>
+
+                <span class="card-label">
+                  کارها
+                </span>
+
+                <h2>
+                  کارهای امروز
+                </h2>
+
+              </div>
+
+              <span
+                class="item-count"
+                id="taskCount"
+              >
+                0
+              </span>
+
+            </div>
+
+
+            <div
+              id="taskList"
+              class="today-list"
+            >
+
+              <div class="empty-state">
+                هنوز کاری برای امروز نداری.
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- =========================
+               Habits
+          ========================== -->
+
+          <section class="today-card">
+
+            <div class="today-card-header">
+
+              <div>
+
+                <span class="card-label">
+                  عادت‌ها
+                </span>
+
+                <h2>
+                  عادت‌های امروز
+                </h2>
+
+              </div>
+
+              <span
+                class="item-count"
+                id="habitCount"
+              >
+                0
+              </span>
+
+            </div>
+
+
+            <div
+              id="habitList"
+              class="today-list"
+            >
+
+              <div class="empty-state">
+                هنوز عادتی برای امروز نداری.
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- =========================
+               Goals
+          ========================== -->
+
+          <section class="today-card">
+
+            <div class="today-card-header">
+
+              <div>
+
+                <span class="card-label">
+                  هدف‌ها
+                </span>
+
+                <h2>
+                  هدف‌های فعال
+                </h2>
+
+              </div>
+
+              <span
+                class="item-count"
+                id="goalCount"
+              >
+                0
+              </span>
+
+            </div>
+
+
+            <div
+              id="goalList"
+              class="today-list"
+            >
+
+              <div class="empty-state">
+                هنوز هدفی اضافه نکردی.
+              </div>
+
+            </div>
+
+          </section>
+
+
+        </section>
+
+      </main>
+
+    </div>
+
+
+    <!-- =========================
+         Scripts
+    ========================== -->
+
+    <script src="./js/api.js"></script>
+    <script src="./js/today.js"></script>
+
+  </body>
+</html>

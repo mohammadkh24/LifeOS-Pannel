@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ورود | LifeOS</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/auth.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <a href="./index.html" class="auth-logo">
+                Life<span>OS</span>
+            </a>
+
+            <div class="auth-header">
+
+                <h1>
+                    خوش برگشتی
+                </h1>
+
+                <p>
+                    برای ادامه وارد حساب خودت شو.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm" class="auth-form">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        ایمیل
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        رمز عبور
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="رمز عبورت رو وارد کن"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div id="loginError" class="form-error"></div>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="primary-btn auth-submit"
+                >
+                    ورود
+                </button>
+
+            </form>
+
+
+            <div class="auth-footer">
+
+                <span>
+                    حساب کاربری نداری؟
+                </span>
+
+                <a href="./register.html">
+                    ساخت حساب
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="./js/api.js"></script>
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
